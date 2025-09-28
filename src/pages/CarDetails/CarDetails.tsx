@@ -13,7 +13,7 @@ const CarDetails = () => {
   const { id } = useParams<{ id: string }>();
 
   const { data, isLoading, isError } = useQuery<Car>({
-    queryKey: ['CarDetails'],
+    queryKey: ['CarDetails', id],
     queryFn: () => {
       if (!id) throw new Error('No car ID provided');
       return fetchCarById(id);
@@ -24,7 +24,6 @@ const CarDetails = () => {
   return (
     <section className={css.sectionDetails}>
       <Container>
-        {isLoading && <BeatLoader color="#3470ff" size={25} />}
         {isError && <div>Error</div> && toast.error('Some problem...')}
 
         <div className={css.wrapper}>
@@ -32,12 +31,17 @@ const CarDetails = () => {
             {data && (
               <img className={css.image} src={data.img} alt={data.description} loading="lazy" />
             )}
-            <BookingForm />
+            {data && <BookingForm />}
           </div>
 
           <div className={css.rigthColumn}>{data && <CarTextDetails car={data} />}</div>
         </div>
       </Container>
+      {isLoading && (
+        <div className={css.overlay}>
+          <BeatLoader color="#3470ff" size={25} />
+        </div>
+      )}
     </section>
   );
 };

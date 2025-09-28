@@ -1,73 +1,80 @@
-# React + TypeScript + Vite
+# Car Rental Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern and user-friendly car rental platform built with React and TypeScript. Find and book the perfect vehicle for your needs with advanced filtering options and seamless user experience.
 
-Currently, two official plugins are available:
+## 🚗 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Car Catalog**: Browse through extensive collection of rental cars
+- **Advanced Filtering**: Filter cars by brand, price, and range mileage
+- **Search Functionality**: Quick search with real-time results
+- **Car Details**: Detailed information about each vehicle including specifications and images
+- **Booking System**: Easy-to-use booking form for rental reservations (Just notification, for now)
+- **Pagination**: Smooth pagination with "Load More" functionality
+- **Responsive Design**: Desktop design
+- **Loading States**: Professional loading indicators and error handling
+- **Date Selection**: Interactive calendar with date range picker for rental periods
 
-## React Compiler
+## 🛠 Technologies Used
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- **Frontend**: React 18, TypeScript
+- **Routing**: React Router DOM
+- **State Management**: Zustand
+- **Data Fetching**: TanStack Query (React Query), Axios
+- **Styling**: CSS Modules
+- **Form Handling**: React Number Format
+- **Notifications**: React Hot Toast
+- **Icons**: Custom SVG components
+- **Build Tool**: Vite
+- **Deployment**: Vercel
 
-## Expanding the ESLint configuration
+🚀 Usage
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Browse Cars: Visit the catalog page to see available rental cars
+Apply Filters: Use the search filters to narrow down your options:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Select car brand from dropdown
+Set maximum price per hour
+Define mileage range
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Search: Click the "Search" button to apply filters
+View Details: Click on any car to see detailed information
+Select Dates: Use the interactive calendar to choose your rental period:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Pick start and end dates
+Calendar highlights selected date range
+Automatic calculation of rental duration
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Book: Fill out the booking form to reserve your selected vehicle
+Load More: Use pagination to see more cars
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🎯 Key Features Explained
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Smart Filtering System**
+
+Real-time filter updates without unnecessary API calls
+Filters are applied only when user clicks "Search"
+Maintains filter state across navigation
+
+-**Interactive Date Picker**
+
+Date Range Selection: Choose start and end dates for your rental
+Visual Calendar: Clean, intuitive calendar interface
+Date Validation: Prevents selection of past dates
+Flexible Periods: Support for short-term and long-term rentals
+
+-**Optimized Performance**
+
+React Query for efficient data caching and synchronization
+Lazy loading of images
+Pagination prevents loading all data at once
+
+-**User Experience**
+
+Loading overlays during search operations
+Toast notifications for errors and confirmations
+Design for desktop
+
+🤵‍♂️ **About Me**
+Aspiring Frontend Developer with a solid foundation in React, TypeScript, HTML, CSS, JavaScript, responsive design, and version control (Git/GitHub). Currently expanding my skills with Node.js.
+
+📩 _Contact:_ myspecspace@gmail.com

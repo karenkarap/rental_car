@@ -31,3 +31,50 @@
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+.warnings {
+    display: flex;
+    justify-content: center;
+
+    font-weight: var(--font-weight-bold);
+    font-size: 30px;
+    line-height: 1.2;
+    color: #8d929a;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
