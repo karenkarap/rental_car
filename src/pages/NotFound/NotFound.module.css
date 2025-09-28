@@ -14,10 +14,10 @@
 .text {
     font-weight: 500;
     font-size: 50px;
+    margin-bottom: 30px;
 }
 
 .button {
-    display: block;
     text-align: center;
     font-weight: 500;
     line-height: normal;
@@ -25,6 +25,5 @@
     color: #fff;
     border-radius: 12px;
     padding: 12px 51px;
-    width: 156px;
     background: #3470ff;
 }
