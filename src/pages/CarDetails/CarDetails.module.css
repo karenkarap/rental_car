@@ -1,0 +1,26 @@
+.sectionDetails {
+    padding-top: 84px;
+    padding-bottom: 104px;
+}
+
+.image {
+    border-radius: 19px;
+    width: 640px;
+    height: 512px;
+    object-fit: cover;
+    margin-bottom: 40px;
+}
+
+.wrapper {
+    display: flex;
+    gap: 72px;
+}
+
+.rigthColumn {
+    max-width: 488px;
+    padding-top: 20px;
+}
+
+.leftColumn {
+    max-width: 640px;
+}

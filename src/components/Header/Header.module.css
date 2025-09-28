@@ -1,0 +1,31 @@
+.header {
+    background: #f2f4f7;
+    border-bottom: 1px solid #f2f4f7;
+}
+
+.headerNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerNavList {
+    display: flex;
+    gap: 32px;
+    font-weight: var(--font-weight-medium);
+    color: #101828;
+}
+
+.headerNavListItem a {
+    display: block;
+    padding: 24px 0;
+    font-weight: var(--font-weight-medium);
+    font-size: 16px;
+    line-height: 1.25;
+    text-align: center;
+}
+
+
+.headerNavListAccent {
+    color: var(--color-accent-second);
+}

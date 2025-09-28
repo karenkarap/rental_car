@@ -1,0 +1,93 @@
+.titleWrapper {
+    display: flex;
+    gap: 16px;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+
+.title {
+    font-weight: var(--font-weight-semibold);
+    font-size: 24px;
+    line-height: 1.33;
+    text-align: center;
+    color: #101828;
+}
+
+.id {
+    font-weight: var(--font-weight-medium);
+    font-size: 16px;
+    line-height: 1.25;
+    color: #8d929a;
+}
+
+.locationWrapper {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.city {
+    margin-left: 4px;
+    margin-right: 16px;
+    font-weight: var(--font-weight-medium);
+    font-size: 16px;
+    line-height: 1.25;
+    color: #101828;
+}
+
+.mileage{
+    font-weight: var(--font-weight-medium);
+    font-size: 16px;
+    line-height: 1.25;
+    color: #101828;
+}
+
+.price {
+    font-weight: var(--font-weight-semibold);
+    font-size: 24px;
+    line-height: 1.33;  
+    color: var(--color-accent-first);
+    display: block;
+    margin-bottom: 32px;
+}
+
+.description {
+    font-weight: var(--font-weight-medium);
+    font-size: 16px;
+    line-height: 1.25;
+    color: #101828;
+    margin-bottom: 68px;
+}
+
+.detailWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 110px;
+}
+
+.conditionsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.subtitle {
+    font-weight: var(--font-weight-semibold);
+    font-size: 20px;
+    line-height: 1.2;
+    color: #101828;
+    margin-bottom: 20px;
+}
+
+.subtitleWrapper {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.text {
+    font-weight: var(--font-weight-medium);
+    font-size: 16px;
+    line-height: 1.25;
+    color: #101828;
+    margin-bottom: 0;
+}

@@ -1,0 +1,33 @@
+.section {
+    padding-block: 84px 124px;
+}
+
+.button {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 38px;
+    border: 1px solid #3470ff;
+    border-radius: 12px;
+    background-color: transparent;
+    color: #101828;
+    font-weight: var(--font-weight-semibold);
+    transition: border var(--transition);
+
+    &:hover,
+    &:focus {
+        border: 1px solid #0b44cd;
+    }
+}
+
+.visuallyHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}

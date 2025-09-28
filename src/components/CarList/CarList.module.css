@@ -1,0 +1,119 @@
+.carListWrapper {
+    margin-bottom: 80px;
+}
+
+.carList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.carListItem {
+    width: calc((100% - 96px) / 4);
+}
+
+.imageWrapper {
+    position: relative;
+    max-width: 100%;
+    height: 268px;
+    margin-bottom: 16px;
+}
+
+
+.image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(18, 20, 23, 0.5) 0%, rgba(18, 20, 23, 0.5) 100%);
+    margin-bottom: 16px;
+}
+
+.favoriteButton {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: transparent;
+    border: none;
+}
+
+.subtitleWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-weight: var(--font-weight-medium);
+    font-size: 16px;
+    line-height: 1.25;
+    color: #101828;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+        
+}
+
+.subtitleAccent {
+    color: var(--color-accent-first);
+}
+
+.price {
+    font-weight: var(--font-weight-medium);
+    font-size: 16px;
+    line-height: 1.25;
+    color: #101828;
+}
+
+.listDescription {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    font-size: 12px;
+    line-height: 1.33;
+    color: #8d929a;
+}
+
+.listDescriptionItem {
+    position: relative;
+    padding-right: 6px;
+}
+
+.listDescriptionItem:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    height: 16px;
+    background-color: #dadde1;
+}
+
+.listDescriptionFirst {
+    margin-bottom: 4px;
+}
+
+.listDescriptionLast {
+    margin-bottom: 28px;
+}
+
+.btn {
+    font-weight: var(--font-weight-semibold);
+    font-size: 16px;
+    line-height: 1.25;
+    color: #fff;
+    border-radius: 12px;
+    background: var(--color-accent-first);
+    padding: 12px 97px;
+    display: block;
+    transition: background var(--transition);
+
+    &:hover,
+    &:focus {
+        background: var(--color-accent-second);
+    }
+}

@@ -1,0 +1,69 @@
+
+.form {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   gap: 16px;
+   margin-bottom: 56px;
+   align-items: flex-end;
+}
+
+
+.label {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 1.33333;
+    color: #8d929a;
+}
+
+.mileageFrom,
+.mileageTo {
+    outline-color: transparent;
+    background: #f7f7f7;
+    border-color: transparent;
+    padding: 10px 24px ;
+    line-height: 1.25;
+    max-width: 160px;
+}
+
+.mileageFrom {
+    border-right: 1px solid #dadde1;
+    border-radius: 12px 0 0 12px;
+}
+
+.mileageTo {
+    border-radius: 0 12px 12px 0;
+}
+
+.btn {
+    
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.25;
+    color: #fff;
+    border-radius: 12px;
+    padding: 12px 51px;
+    background: #3470ff;
+    border: none;
+
+    &:hover,
+    &:focus {
+        background: #0b44cd;
+    }
+}
+
+.brandSelect {
+    width: 204px;
+}
+
+.priceSelect {
+    width: 196px;
+}
+
+.brandHeight {
+    max-height: 244px;
+}
+
+.priceHeight {
+    max-height: 160px;
+}
