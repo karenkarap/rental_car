@@ -1,0 +1,82 @@
+.favoriteButton {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: transparent;
+    border: none;
+}
+
+.toastWrapper {
+    line-height: 1.25;
+    text-align: center;
+    color: #101828;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.accentToast {
+    color: var(--color-accent-first);
+    display: block;
+}
+
+.toastWrapperBtn {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.buttonYes {
+    padding: 10px 12px;
+    border-radius: 12px;
+    border-color: transparent;
+    color: #3470ff;
+    background: #dadde1;
+    transition: background var(--transition), color var(--transition);
+
+    &:hover,
+    &:focus {
+        color: #fff;
+        background: var(--color-accent-second);
+    }
+}
+
+.buttonNo {
+    padding: 10px 12px;
+    border-radius: 12px;
+    border-color: transparent;
+    color: #3470ff;
+    transition: background var(--transition);
+    background: #dadde1;
+    transition: background var(--transition), color var(--transition);
+
+    &:hover,
+    &:focus {
+        color: #fff;
+        background: var(--color-accent-second);
+    }
+}
+
+
+.heart {
+    transition: transform 0.3s ease;
+}
+
+.heartActive {
+    animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.4);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

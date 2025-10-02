@@ -145,7 +145,7 @@
     }
 }
 
-/* toast */
+/* toast
 
 .toastWrapper {
     line-height: 1.25;
@@ -198,3 +198,26 @@
             background: var(--color-accent-second);
         }
 }
+
+.heart {
+    transition: transform 0.3s ease;
+}
+
+.heartActive {
+    animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.4);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+} 
+    */

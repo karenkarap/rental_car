@@ -8,12 +8,9 @@ import CarTextDetails from '../../components/CarTextDetails/CarTextDetails';
 import BookingForm from '../../components/BookingForm/BookingForm';
 import { BeatLoader } from 'react-spinners';
 import toast from 'react-hot-toast';
-import { useFavoritesStore } from '../../store/favoritesStore';
-import LikeActive from '../../assets/icons/like-active.svg?react';
-import LikeInactive from '../../assets/icons/like-default.svg?react';
+import FavoriteButton from '../../components/FavoriteButton/FavoriteButton';
 
 const CarDetails = () => {
-  const { favorites, addFavorite, removeFavorite } = useFavoritesStore();
   const { id } = useParams<{ id: string }>();
 
   const { data, isLoading, isError } = useQuery<Car>({
@@ -24,7 +21,7 @@ const CarDetails = () => {
     },
     enabled: !!id,
   });
-  console.log(favorites);
+
   return (
     <section className={css.sectionDetails}>
       <Container>
@@ -35,20 +32,7 @@ const CarDetails = () => {
             {data && (
               <div className={css.imageWrapper}>
                 <img className={css.image} src={data.img} alt={data.description} loading="lazy" />
-                <button
-                  className={css.favoriteButton}
-                  onClick={() =>
-                    favorites.some((fav) => fav.id === data.id)
-                      ? removeFavorite(data.id)
-                      : addFavorite(data)
-                  }
-                >
-                  {favorites.some((fav) => fav.id === data.id) ? (
-                    <LikeActive width="16" height="16" />
-                  ) : (
-                    <LikeInactive width="16" height="16" />
-                  )}
-                </button>
+                <FavoriteButton car={data} />
               </div>
             )}
             {data && <BookingForm />}

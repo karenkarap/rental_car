@@ -1,17 +1,13 @@
 import type { Car } from '../../types/car';
 import css from './CarList.module.css';
-import LikeActive from '../../assets/icons/like-active.svg?react';
-import LikeInactive from '../../assets/icons/like-default.svg?react';
 import { Link } from 'react-router-dom';
-import { useFavoritesStore } from '../../store/favoritesStore';
+import FavoriteButton from '../FavoriteButton/FavoriteButton';
 
 interface CarListProps {
   cars: Car[];
 }
 
 const CarList = ({ cars }: CarListProps) => {
-  const { favorites, addFavorite, removeFavorite } = useFavoritesStore();
-
   return (
     <div className={css.carListWrapper}>
       <ul className={css.carList}>
@@ -19,20 +15,7 @@ const CarList = ({ cars }: CarListProps) => {
           <li key={car.id} className={css.carListItem}>
             <div className={css.imageWrapper}>
               <img className={css.image} src={car.img} alt={car.description} loading="lazy" />
-              <button
-                className={css.favoriteButton}
-                onClick={() =>
-                  favorites.some((fav) => fav.id === car.id)
-                    ? removeFavorite(car.id)
-                    : addFavorite(car)
-                }
-              >
-                {favorites.some((fav) => fav.id === car.id) ? (
-                  <LikeActive width="16" height="16" />
-                ) : (
-                  <LikeInactive width="16" height="16" />
-                )}
-              </button>
+              <FavoriteButton car={car} />
             </div>
 
             <div className={css.subtitleWrapper}>
