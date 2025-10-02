@@ -3,12 +3,24 @@
     padding-bottom: 104px;
 }
 
+.imageWrapper {
+    position: relative;
+}
+
 .image {
     border-radius: 19px;
     width: 640px;
     height: 512px;
     object-fit: cover;
     margin-bottom: 40px;
+}
+
+.favoriteButton {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: transparent;
+    border: none;
 }
 
 .wrapper {

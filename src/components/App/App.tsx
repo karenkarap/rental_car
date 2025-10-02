@@ -5,6 +5,7 @@ import Catalog from '../../pages/Catalog/Catalog';
 import CarDetails from '../../pages/CarDetails/CarDetails';
 import { Toaster } from 'react-hot-toast';
 import NotFound from '../../pages/NotFound/NotFound';
+import CarsListFavorites from '../../pages/CarsListFavorites/CarsListFavorites';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/catalog/:id" element={<CarDetails />} />
+          <Route path="/favorites" element={<CarsListFavorites />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

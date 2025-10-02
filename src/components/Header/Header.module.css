@@ -29,3 +29,18 @@
 .headerNavListAccent {
     color: var(--color-accent-second);
 }
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3470ff;
+    color: white;
+    border-radius: 10px;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 6px;
+    min-width: 20px;
+    height: 20px;
+}
